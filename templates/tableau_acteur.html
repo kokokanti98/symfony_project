@@ -1,0 +1,25 @@
+<table class="table table-striped">
+
+    <thead>
+        <tr>
+            <td>Index</td>
+            <td>Nom</td>
+            <td>Prenom</td>
+            <td>Poste</td>
+            <td>Age</td>
+        </tr>
+    </thead>
+    <tbody>
+        {% for acteur in acteurs %}
+        <tr>
+            <td>{{acteur.id}}</td>
+            <td>{{acteur.nom}}</td>
+            <td>{{acteur.prenom}}</td>
+            <td>{{acteur.poste}}</td>
+            <td>{{acteur.age}}</td>
+            <td><a type="button" class="btn btn-danger" href="{{ path('suppr_acteur', {id: acteur.id}) }}">Supprimmer</a></td>
+            <td><a type="button" class="btn btn-warning" href="{{ path('maj_equipement', {id: acteur.id}) }}">Modifier</a></td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>

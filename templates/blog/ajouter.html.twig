@@ -1,0 +1,14 @@
+{{ include('head.html') }}
+{{ include('navbar.html') }}      
+{{ include('inside_body.html') }}
+
+		{{ form_start(form) }}
+			{{ form_widget(form) }}
+
+			
+				<button type="submit" class="btn btn-success">Ajouter</button>
+		{{ form_end(form) }}
+		
+        {% block javascripts %}{% endblock %}
+
+{{ include('footer.html') }}

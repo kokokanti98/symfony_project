@@ -1,0 +1,22 @@
+<table class="table table-striped">
+
+    <thead>
+        <tr>
+            <td>Index</td>
+            <td>Nom</td>
+            <td>Nombre de materiel</td>
+        </tr>
+    </thead>
+    <tbody>
+        {% for equipement in equipements %}
+        <tr>
+            <td>{{equipement.id}}</td>
+            <td>{{equipement.nom}}</td>
+            <td>{{equipement.nombre}}</td>
+            <td><a type="button" class="btn btn-danger" href="{{ path('suppr_equipement', {id: equipement.id}) }}">Supprimmer</a></td>
+            <td><a type="button" class="btn btn-warning" href="{{ path('maj_equipement', {id: equipement.id}) }}">Modifier</a></td>
+            <td><a type="button" class="btn btn-success" href="{{ path('equipement_voir', {id: equipement.id}) }}">Voir plus d'information</a></td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
