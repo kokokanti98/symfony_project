@@ -43,6 +43,9 @@ class ActeurAdminController extends AbstractController
      */
 	public function formulaire(Acteur $acteur = null,Request $request, EntityManagerInterface $em)
     {
+		/**
+       * @Method({"POST"})
+	   */
 		#Si acteur est null donc on creer une classe acteur
 		if(!$acteur){
 			$acteur = new Acteur();
@@ -61,7 +64,8 @@ class ActeurAdminController extends AbstractController
 
 				#REDIRECTION VERS LE ELLE MEME(SITE)
 			return $this->render('blog/ajouter.html.twig', [
-			'form' => $form->createView(),
+				'form' => $form->createView(),
+				'majMode' => $acteur-> getId() !== null
 			]);
 		}
 

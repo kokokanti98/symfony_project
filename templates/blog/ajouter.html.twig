@@ -5,8 +5,11 @@
 		{{ form_start(form) }}
 			{{ form_widget(form) }}
 
-			
+			{% if majMode %}
+				<button type="submit" class="btn btn-warning">Modifier</button>
+			{% else  %}
 				<button type="submit" class="btn btn-success">Ajouter</button>
+			{% endif %}
 		{{ form_end(form) }}
 		
         {% block javascripts %}{% endblock %}

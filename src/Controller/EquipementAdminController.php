@@ -78,7 +78,8 @@ class EquipementAdminController extends AbstractController
 
 				#REDIRECTION VERS LE ELLE MEME(SITE)
 			return $this->render('blog/ajouter.html.twig', [
-			'form' => $form->createView(),
+				'form' => $form->createView(),
+				'majMode' => $equipement-> getId() !== null
 			]);
 		}
 

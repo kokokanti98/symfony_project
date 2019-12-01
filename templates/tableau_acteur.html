@@ -18,7 +18,7 @@
             <td>{{acteur.poste}}</td>
             <td>{{acteur.age}}</td>
             <td><a type="button" class="btn btn-danger" href="{{ path('suppr_acteur', {id: acteur.id}) }}">Supprimmer</a></td>
-            <td><a type="button" class="btn btn-warning" href="{{ path('maj_equipement', {id: acteur.id}) }}">Modifier</a></td>
+            <td><a type="button" class="btn btn-warning" href="{{ path('maj_acteur', {id: acteur.id}) }}">Modifier</a></td>
         </tr>
         {% endfor %}
     </tbody>
